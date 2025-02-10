@@ -1,0 +1,139 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background: url(snake_bg.jpg);
+    min-height: 100vh;
+    min-width: 100vw;
+    contain: content;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBox {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 240px;
+
+    border-radius: 20px;
+    padding: 10px;
+    font-family: "Roboto";
+
+    display: flex;
+    justify-content: center;
+}
+
+#hiscoreBox {
+    position: absolute;
+    top: 120px;
+    right: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 240px;
+
+    border-radius: 20px;
+    padding: 10px;
+    font-family: "Roboto";
+
+    display: flex;
+    justify-content: center;
+}
+
+#clear {
+    position: absolute;
+    top: 200px;
+    right: 80px;
+    font-size: 20px;
+    font-weight: bold;
+
+    background-color: rgb(254, 42, 42);
+    color: black;
+    height: 50px;
+    width: 240px;
+
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: "Roboto";
+
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+#scoreBox:hover {
+    transform: scale(1.1);
+    background-color: rgb(187, 16, 187);
+    color: black;
+    cursor: pointer;
+    border: 3px solid black;
+}
+
+#hiscoreBox:hover {
+    transform: scale(1.1);
+    background-color: rgb(187, 16, 187);
+    color: black;
+    cursor: pointer;
+    border: 3px solid black;
+}
+#clear:hover {
+    transform: scale(1.1);
+    background-color: green;
+    color: white;
+}
+
+#board{
+    background: linear-gradient(rgb(124, 222, 124), rgb(203, 203, 85));
+    width: 110vmin;
+    height: 90vmin;
+
+    margin-left: -100px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+
+    /* GRID IMP CONCEPT */
+    display: grid;
+    grid-template-rows: repeat(30, 1fr);
+    grid-template-columns: repeat(30, 1fr);
+
+    /* 
+    right click and inspect to view the grid (maths book in childhood) and
+    place cursor on board to see boxes
+    */
+}
+
+.head {
+    background: linear-gradient(red, yellow);
+    border-radius: 5px;
+    border: 2px solid purple;
+    transform:scale(1.2)
+
+}
+
+.snake {
+    background-color: purple;
+    border-radius: 10px;
+    border: 0.25vmin solid black;
+}
+
+.food {
+    background: linear-gradient(red, purple);
+    border-radius: 8px;
+    border: 0.25vmin solid black;
+}
